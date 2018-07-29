@@ -8,8 +8,6 @@ Sistema de Eventos encomendado pela Morena.
 [![Code Health](https://landscape.io/github/fois2003/eventex/master/landscape.svg?style=flat)](https://landscape.io/github/fois2003/eventex/master)
 
 
-
-
 ## Como desenvolver?
 
 1.	Clone o repositório.
