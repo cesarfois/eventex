@@ -2,12 +2,13 @@ from django.test import TestCase
 from eventex.subscriptions.models import Subscription
 from datetime import datetime
 
+
 class SubscriptionModelTest(TestCase):
     def setUp(self):
         self.obj = Subscription(
             name='Cesar Fois',
             cpf='12345678901',
-            email='henrique@bastos.net',
+            email='fois2010@gmail.com',
             phone='12-996450253'
         )
         self.obj.save()
@@ -21,7 +22,3 @@ class SubscriptionModelTest(TestCase):
 
     def test_str(self):
         self.assertEqual('Cesar Fois', str(self.obj))
-
-
-
-
