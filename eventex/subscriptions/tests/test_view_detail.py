@@ -1,4 +1,5 @@
 from django.test import TestCase
+
 from eventex.subscriptions.models import Subscription
 
 
@@ -10,7 +11,7 @@ class SubscriptionDetailGet(TestCase):
             email='fois2010@gmail.com',
             phone='12-996450253'
         )
-        self.resp = self.client.get('incricao/{}/'.format(self.obj.pk))
+        self.resp = self.client.get('/inscricao/{}/'.format(self.obj.pk))
 
     def test_get(self):
         self.assertEqual(200, self.resp.status_code)
@@ -25,7 +26,6 @@ class SubscriptionDetailGet(TestCase):
     def test_html(self):
         contents = (self.obj.name, self.obj.cpf,
                     self.obj.email, self.obj.phone)
-
         with self.subTest():
             for expected in contents:
                 self.assertContains(self.resp, expected)
