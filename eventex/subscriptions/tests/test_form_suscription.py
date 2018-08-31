@@ -14,11 +14,16 @@ class SubcriptionFormTest(TestCase):
         form = self.make_validated_form(cpf='ABCD12345678901')
         self.assertFormErrorCode(form, 'cpf', 'digits')
 
-
     def test_cpf_has_11_digits(self):
         """CPF must have 11 digiits."""
         form = self.make_validated_form(cpf='1234')
         self.assertFormErrorCode(form, 'cpf', 'lengh')
+
+    def test_name_must_be_capitalized(self):
+        """Nem must be capitalized"""
+        #Henrique
+        form = self.make_validated_form(name='CESAR fois')
+        self.assertEqual('Cesar Fois', form.cleaned_data['name'])
 
     def assertFormErrorCode(self, form, field, code):
         errors = form.errors.as_data()
