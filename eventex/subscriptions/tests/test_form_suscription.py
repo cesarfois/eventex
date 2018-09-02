@@ -11,13 +11,13 @@ class SubcriptionFormTest(TestCase):
 
     def test_cpf_is_digit(self):
         """CPF must only accept digits"""
-        form = self.make_validated_form(cpf='ABCD12345678901')
+        form = self.make_validated_form(cpf='ABCD5678901')
         self.assertFormErrorCode(form, 'cpf', 'digits')
 
     def test_cpf_has_11_digits(self):
         """CPF must have 11 digiits."""
         form = self.make_validated_form(cpf='1234')
-        self.assertFormErrorCode(form, 'cpf', 'lengh')
+        self.assertFormErrorCode(form, 'cpf', 'length')
 
     def test_name_must_be_capitalized(self):
         """Nem must be capitalized"""
