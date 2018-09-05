@@ -35,7 +35,7 @@
 	<body>
 
         <div class="header-frame header-frame-absolute  row">
-            {% include 'nav.html' only %}
+            {% include 'nav.html' only%}
         </div>
 
       	<!-- TOP -->
@@ -59,10 +59,14 @@
         <section id="speakers">
             <div class="speakers text-align-center row desktop-8 padding-bottom-2 container">
                 <h2>Palestrantes Convidados</h2>
-                {% for speakears in speakers  %}
+                {% for speaker in speakers  %}
                 <div class="desktop-4">
-                    <img src={{ speakears.photo }}>
-                    <h4>{{ speakears.name }}</h4>
+                    <img src={{ speaker.photo }}>
+                    <h4>
+                        <a href="{{ speaker.get_absolute_url }}">
+                        {{ speaker.name }}
+                        </a>
+                    </h4>
                 </div>
                 {% endfor %}
             </div>

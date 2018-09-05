@@ -21,28 +21,19 @@
         <link href='http://fonts.googleapis.com/css?family=Economica:400,700' rel='stylesheet' type='text/css'>
     </head>
     <style>
-        .alert{
-            padding: 0 15px;
-            margin-bottom: 1rem;
-            border: 1px solid transparent;
-            border-radius: .25rem;
-        }
-        .alert p{
+         .alert p{
             padding: 7px 0 7px;
         }
-        .alert.success{
-            color: #3c763d;
-            background-color: #dff0d8;
-            border-color: #d0e9c6;
-        }
+
     </style>
 	<body>
         <div class="header-frame row">
-            {% include 'nav.html' only%}
+            {% include 'nav.html' %}
         </div>
 
         {% block content %}
         {% endblock content %}
+
 
     </body>
 </html>
