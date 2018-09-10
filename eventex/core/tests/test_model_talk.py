@@ -1,6 +1,6 @@
 from django.test import TestCase
 from eventex.core.models import Talk, Course
-from eventex.core.templates.core.managers import PeriodManager
+from eventex.core.managers import PeriodManager
 
 
 class TalkModelTest(TestCase):
